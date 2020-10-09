@@ -304,7 +304,7 @@ def estimate(covfile, respfile, **kwargs):
         if testresp is not None:
             Yte, testmask = load_response_vars(testresp, maskfile)
             if len(Yte.shape) == 1:
-                Yte = Yte[:, np.newaxis].T
+                Yte = Yte[:, np.newaxis]
         else:
             sub_te = Xte.shape[0]
             Yte = np.zeros([sub_te, Nmod])
